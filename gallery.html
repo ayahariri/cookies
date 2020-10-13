@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <link rel="reset" href="css/reset.css">
+      <link rel="stylesheet" href="css/stylegallery.css">
+</head>
+<body>
+  <a id="homepage" href="index.html">Homepage</a>
+    <div class="w3-content w3-section" style="max-width:600px">
+        <img class="mySlides" src="img/family.jpg">
+        <img class="mySlides" src="img/fish.jpg">
+        <img class="mySlides" src="img/frosted-cookie.jpg">
+        <img class="mySlides" src="img/cutter.jpg">
+      </div>
+
+        <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>
