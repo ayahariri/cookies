@@ -248,7 +248,7 @@ Shop.prototype.StoreCookiesPerHour = function () {
         this.cookiesPerHour.push(`${hours[i]} : ${average} cookies`);
         allTotals[i] += average;
     }
-    allTotals[i] += this.total;
+    allTotals[i] =+ this.total;
 }
 
 Shop.prototype.render = function () {
