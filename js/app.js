@@ -215,9 +215,11 @@ printLocation(Paris);
 printLocation(Lima);
 */
 
-function getRandom(min, max) {
+/*function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+}*/
+
+var shops = [];
 var hours = [];
 function allHours() {
     for (i = 6; i <= 12; i++) {
@@ -245,10 +247,10 @@ Shop.prototype.StoreCookiesPerHour = function () {
         var random = getRandom(this.minCustomer, this.maxCustomer);
         var average = Math.floor(random * this.averageCookie);
         this.total += average;
-        this.cookiesPerHour.push(`${hours[i]} : ${average} cookies`);
+        this.cookiesPerHour.push(`${average}`);
         allTotals[i] += average;
     }
-    allTotals[i] =+ this.total;
+    allTotals[i] = + this.total;
 }
 
 Shop.prototype.render = function () {
@@ -292,7 +294,7 @@ function renderTableHeader() {
         else if (i === hours.length + 1) { //  for last empty cell
             var colData = document.createElement('th');
             rowHeader.appendChild(colData);
-            colData.textContent = 'Daily Location Total'[i - 1];
+            colData.textContent = 'Daily Location Total';
         }
         else { // hours
             var colData = document.createElement('th');
@@ -313,7 +315,7 @@ function renderTableFooter() {
         if (i === 0) { // for first empty cell
             var colData = document.createElement('th');
             rowFooter.appendChild(colData);
-            colData.textContent = 'Totals';
+            colData.textContent = 'Total';
         }
         else if (i === hours.length + 1) { //  for last empty cell
             var colData = document.createElement('th');
@@ -324,6 +326,7 @@ function renderTableFooter() {
             var colData = document.createElement('th');
             rowFooter.appendChild(colData);
             colData.textContent = allTotals[i - 1];
+
         }
     }
     table.appendChild(rowFooter);
@@ -344,6 +347,8 @@ var paris = new Shop('Paris', 20, 38, 2.3);
 var lima = new Shop('Lima', 2, 16, 4.6);
 
 
+
+
 for (var i = 0; i < shops.length; i++) {
     shops[i].StoreCookiesPerHour();
     shops[i].render();
@@ -351,4 +356,28 @@ for (var i = 0; i < shops.length; i++) {
 
 renderTableFooter();
 
+var myForm = document.getElementById('cookieForm');
+//console.log (myForm);//
+
+myForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var locationCity = event.target.locationCity.value;
+    var minCustomer = parseInt(event.target.minCustomer.value);
+    var maxCustomer = parseInt(event.target.maxCustomer.value);
+    var avCookie = parseFloat(event.target.avCookie.value);
+    //console.log(typeof(minCustomer));//
+    //console.log(typeof(avCookie));//
+    var rowFooter = document.createElement('tr');
+    var newLocation = new Shop(locationCity, minCustomer, maxCustomer, avCookie);
+
+    console.log(newLocation);
+    newLocation.StoreCookiesPerHour();
+    newLocation.render();
+    myForm.reset();
+
+})
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
