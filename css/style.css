@@ -1,5 +1,4 @@
 body {
-    background-color: #9bb7f4;    
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
@@ -12,7 +11,7 @@ color:#f5f5f5;
     margin-left: 300px;
 }
 header{
-    background-color: #7d83e0;
+    background-color: #4278ed;
 }
 img {
     width: 20%;
@@ -28,7 +27,7 @@ img {
 section{
     margin-top: 25px;
     display: inline-block;
-    background-color: #7d83e0;
+    background-color: #4278ed;
     margin-left: 50px;
 }
 h1{
@@ -43,7 +42,8 @@ h2{
     padding: 20px 40px 20px 40px;
     font-size: 30px;
     font-style: italic;
-    background-color: #7d83e0;
+    background-color: white;
+    color: #4278ed;
 }
 
 #intro {
@@ -62,38 +62,37 @@ width: 400px;
 }
 h3{
     display: inline-block;
-    background-color: #7d83e0;
+    background-color: #4278ed;
     position: absolute;
     font-size: 30px;
     font-style: italic;
     padding-left: 40px;
     color: #f5f5f5;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-weight: 900;    
 }
     h3{
         position: absolute;
         margin-top: 25px;
-        margin-left: 40px;
-        padding-right: 470px;
+        margin-left: 25px;
+        padding-right: 480px;
         padding-left: 10px;
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color: #5c62b6;
+        background-color: #4278ed;
 
     }
 
 .city{
     display: inline-block;
 font-size: 30px;
-font-family: Arial, Helvetica, sans-serif;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 margin-top: 40px;
 font-family: serif;
 
 }
 .allMaps{
    float: right;
-   background-color: #7d83e0;
+   background-color: #4278ed;
    width: 600px;
    margin-top: 130px;
    margin-right: 45px;
@@ -105,7 +104,10 @@ font-family: serif;
     margin-left: 45px;
     padding-left: 10px;
     padding-right: 265px;
-    background-color: #5c62b6;
+    background-color: #4278ed;
+    color: white;
+    border-radius: 10mm;
+
 
 }
 
@@ -114,6 +116,7 @@ font-family: serif;
     padding-left: 20px;
     text-align: center;
     font-family: serif;
+    color: #4278ed;
 }
 
 #chinook{
@@ -133,26 +136,29 @@ width: 350px;
 }
 #contactUs{
 padding-right: 320px;
-background-color: #7d83e0;
+background-color: #4278ed;
+border-radius: 10mm;
+
 }
 .contact{
     margin-top: 20px;
     margin-left: 40px;
     font-family: serif;
     width: 500px;
+    color: #4278ed;
     
 }
 h4{
     display: inline-block;
     margin-top: 120px;
-    margin-left: 40px;
+    margin-left: 25px;
     padding-left: 15px;
-    padding-right: 300px;
+    padding-right: 340px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #7d83e0;
-    color: #f5f5f5
-    
+    background-color: #4278ed;;
+    color: #f5f5f5;
+    border-radius: 10mm;
 }
 #shirt{
     margin-left: 40px;
